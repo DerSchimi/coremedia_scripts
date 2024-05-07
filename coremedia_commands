@@ -1,0 +1,16 @@
+export CM_HOME='set path here'
+alias ccHome='echo Home is: $CM_HOME'
+alias ccOverview='open https://overview.docker.localhost/'
+alias ccStudio='open https://studio.docker.localhost/'
+alias ccStudioLocal='open http://localhost:3000'
+alias ccBuildAll='cd $CM_HOME && mvn clean install'
+alias ccBuildAllWoTests='cd $CM_HOME && mvn clean install -DSkipTests'
+alias ccBuildAllWithImage='cd $CM_HOME && mvn clean install -DskipTests -Pdefault-image'
+alias ccBuildStudio='cd $CM_HOME/apps/studio-client/ && pnpm -r run build'
+alias ccBuildStudioClientAndRunLocal='cd $CM_HOME/apps/studio-client/ && pnpm -r run build && cd global/studio && pnpm run start --proxyTargetUri=http://studio.docker.localhost'
+alias ccDockerBuildStudioAndRun='cd $CM_HOME/apps/studio-client/ && pnpm -r run build && pnpm -r run package && docker buildx build . --tag coremedia/studio-client:latest && cd ../../global/deployment/docker && docker compose up -d studio-client'
+alias ccDockerRunAll='cd $CM_HOME/global/deployment/docker && docker compose up --force-recreate -d'
+alias ccDockerBuildAndRunAll='cd $CM_HOME && mvn clean install -DskipTests -Pdefault-image && cd global/deployment/docker && docker compose up -d'
+
+alias ccCleanStudio='cd $CM_HOME/apps/studio-client/ && pnpm -r clean && pnpm install'
+alias ccExplain='cat $HOME/coremedia_commands
