@@ -1,7 +1,7 @@
 # coremedia_scripts
 Some usefull build &amp; run scripts for coremedia 11
 
-Instructions:
+Instructions for coremedia_commands:
 - Copy coremedia_commands to your home directory
 - Change CM_HOME to your coremedia 11 directory
 - Depending on your shell you can inlcude the scripts like this:
