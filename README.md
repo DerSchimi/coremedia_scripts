@@ -13,3 +13,8 @@ Instructions for coremedia_commands:
 
 - Add your commands to coremedia_command...    
    
+Instructions for read_coremedia_cloud_properties.sh
+  Replace these properties:
+  customer="replace me"
+  # Define the token for authentication
+  pat='replace me'
