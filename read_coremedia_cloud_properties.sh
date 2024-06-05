@@ -9,7 +9,7 @@ base_url="https://api.$customer.coremedia.cloud"
 
 environments=("uat" "uat2" "production")
 
-containers=("cae-preview" "cae-live-1" "cae-live-2" "caefeeder-live" "caefeeder-preview" "content-feeder" "content-management-server" "headless-server-live-1" "headless-server-live-2" "headless-server-preview" "master-live-server" "replication-live-server-1" "replication-live-server2" "studio-client" "solr" "studio-server" "user-changes" "workflow-server")
+containers=("cae-preview" "cae-live" "caefeeder-live" "caefeeder-preview" "content-feeder" "content-management-server" "headless-server-live" "headless-server-preview" "master-live-server" "replication-live-server" "studio-client" "solr" "studio-server" "user-changes" "workflow-server")
 
 expToken=$(curl -sX POST "$base_url/v1/token" -H "Authorization: Bearer $pat" | jq -r .data.token)
 
