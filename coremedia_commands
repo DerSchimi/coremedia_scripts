@@ -14,5 +14,15 @@ alias ccDockerBuildStudioAndRun='ccDockerBuildStudioClient && cd $CM_HOME/global
 alias ccDockerRunAll='cd $CM_HOME/global/deployment/docker && docker compose up --force-recreate -d'
 alias ccDockerBuildAndRunAll='cd $CM_HOME && mvn clean install -DskipTests -Pdefault-image && ccDockerBuildStudioClient && cd $CM_HOME && cd global/deployment/docker && docker compose up -d --force-recreate'
 
+alias ccDockerBuildCaePreview='cd $CM_HOME && mvn clean install -pl :cae-preview-app -am -P default-image'
+alias ccDockerBuildCaePreviewAndRun='ccDockerBuildCaePreview && cd $CM_HOME/global/deployment/docker && docker compose up -d cae-preview --force-recreate'
+alias ccDockerBuildHeadlessPreview='cd $CM_HOME && mvn clean install -pl :headless-server-app -am -P default-image'
+alias ccDockerBuildHeadlessPreviewAndRun='ccDockerBuildHeadlessPreview && cd $CM_HOME/global/deployment/docker && docker compose up -d headless-server-preview --force-recreate'
+alias ccDockerBuildStudioServer='cd $CM_HOME && mvn clean install -pl :studio-server-app -am -P default-image'
+alias ccDockerBuildStudioServerAndRun='ccDockerBuildStudioServer && cd $CM_HOME/global/deployment/docker && docker compose up -d studio-server --force-recreate'
+alias ccDockerBuildContentServer='cd $CM_HOME && mvn clean install -pl :content-server-app -am -P default-image'
+alias ccDockerBuildContentServerAndRun='ccDockerBuildContentServer && cd $CM_HOME/global/deployment/docker && docker compose up -d content-management-server --force-recreate'
+
+
 alias ccCleanStudio='cd $CM_HOME/apps/studio-client/ && pnpm -r clean && pnpm install'
 alias ccExplain='cat $HOME/coremedia_commands
