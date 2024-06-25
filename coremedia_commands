@@ -14,6 +14,8 @@ alias ccDockerBuildStudioAndRun='ccDockerBuildStudioClient && cd $CM_HOME/global
 alias ccDockerRunAll='cd $CM_HOME/global/deployment/docker && docker compose up --force-recreate -d'
 alias ccDockerBuildAndRunAll='cd $CM_HOME && mvn clean install -DskipTests -Pdefault-image && ccDockerBuildStudioClient && cd $CM_HOME && cd global/deployment/docker && docker compose up -d --force-recreate'
 
+alias ccDockerBuildCaeLive='cd $CM_HOME && mvn clean install -pl :cae-live-app -am -P default-image'
+alias ccDockerBuildCaeLiveAndRun='ccDockerBuildCaeLive && cd $CM_HOME/global/deployment/docker && docker compose up -d cae-live --force-recreate'
 alias ccDockerBuildCaePreview='cd $CM_HOME && mvn clean install -pl :cae-preview-app -am -P default-image'
 alias ccDockerBuildCaePreviewAndRun='ccDockerBuildCaePreview && cd $CM_HOME/global/deployment/docker && docker compose up -d cae-preview --force-recreate'
 alias ccDockerBuildHeadlessPreview='cd $CM_HOME && mvn clean install -pl :headless-server-app -am -P default-image'
