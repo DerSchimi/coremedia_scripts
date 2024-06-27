@@ -24,7 +24,10 @@ alias ccDockerBuildStudioServer='cd $CM_HOME && mvn clean install -pl :studio-se
 alias ccDockerBuildStudioServerAndRun='ccDockerBuildStudioServer && cd $CM_HOME/global/deployment/docker && docker compose up -d studio-server --force-recreate'
 alias ccDockerBuildContentServer='cd $CM_HOME && mvn clean install -pl :content-server-app -am -P default-image'
 alias ccDockerBuildContentServerAndRun='ccDockerBuildContentServer && cd $CM_HOME/global/deployment/docker && docker compose up -d content-management-server --force-recreate'
-
+alias ccDockerBuildCaeFeederLive='cd $CM_HOME && mvn clean install -pl :cae-feeder-app -am -P default-image'
+alias ccDockerBuildCaeFeederLiveAndRun='ccDockerBuildCaeFeederLive && cd $CM_HOME/global/deployment/docker && docker compose up -d cae-feeder-live --force-recreate'
+alias ccDockerBuildCaeFeederPreview='cd $CM_HOME && mvn clean install -pl :cae-feeder-app -am -P default-image'
+alias ccDockerBuildCaeFeederPreviewAndRun='ccDockerBuildCaeFeederPreview && cd $CM_HOME/global/deployment/docker && docker compose up -d cae-feeder-preview --force-recreate'
 
 alias ccCleanStudio='cd $CM_HOME/apps/studio-client/ && pnpm -r clean && pnpm install'
 alias ccExplain='cat $HOME/coremedia_commands
