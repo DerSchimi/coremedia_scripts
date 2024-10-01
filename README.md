@@ -1,3 +1,5 @@
+### Please use cc-Commander instead of this scripts: https://github.com/DerSchimi/cc-Commander
+
 # coremedia_scripts
 Some usefull build &amp; run scripts for coremedia 11
 
